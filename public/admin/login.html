@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>登录页</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
     <link rel="stylesheet" href="css/common.css" />
   </head>
   <body class="body_bg">
@@ -16,18 +17,19 @@
             <h4 class="text-center">后台管理系统</h4>
           </div>
           <div class="panel-body">
-            <form class="form-horizontal">
+            <form id="form" class="form-horizontal">
               <!-- form表单中有一个类 ：form-group -->
               <div class="form-group">
                 <label for="username" class="col-sm-3 control-label">用户名</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+                  <!-- autocomplete:关闭的默认提示 -->
+                  <input type="text" name="username" autocomplete="off" class="form-control" id="username" placeholder="请输入用户名">
                 </div>
               </div>
               <div class="form-group">
                 <label for="password" class="col-sm-3 control-label">密码</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                  <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码">
                 </div>
               </div>
               <div class="form-group">
@@ -43,5 +45,7 @@
     </div>
     <script src="lib/jquery/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

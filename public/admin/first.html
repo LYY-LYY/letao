@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet" href="css/common.css">
 </head>
+
 <body>
   <div class="lt_aside">
     <div class="brand">
@@ -31,14 +33,14 @@
             <span class="glyphicon glyphicon-list"></span>
             <span>分类管理</span>
           </a>
-          <div class="second" style="display:none;">
-            <a href="first.html">一级分类</a>
+          <div class="second" style="display:block;">
+            <a href="first.html" class="active">一级分类</a>
             <a href="second.html">二级分类</a>
           </div>
         </li>
         <li>
           <a href="product.html">
-            <span class="glyphicon glyphicon-tags"></span>
+            <span class="glyphicon glyphicono-tags"></span>
             <span>商品管理</span>
           </a>
         </li>
@@ -54,12 +56,27 @@
       <!-- 面包屑导航 -->
       <ol class="breadcrumb">
         <li><a href="index.html">管理系统</a></li>
-        <li class="active">首页</li>
+        <li><a href="#">分类管理</a></li>
+        <li class="active">一级分类</li>
       </ol>
       <!-- 每个页面具体的内容 -->
-      <div class="lt_content">
-        <div class="left pull-left"></div>
-        <div class="right pull-right"></div>
+      <div class="lt_contnet">
+        <button class="btn btn-default btn_add">添加分类</button>
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th width="20%">序号</th>
+              <th>一级分类</th>
+            </tr>
+          </thead>
+          <tbody>
+
+
+          </tbody>
+        </table>
+        <div class="text-right">
+          <ul id="paginator"></ul>
+        </div>
       </div>
     </div>
   </div>
@@ -69,7 +86,8 @@
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
           <h4 class="modal-title">温馨提示</h4>
         </div>
         <div class="modal-body">
@@ -83,13 +101,47 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
+  <div id="addModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">添加分类</h4>
+          </div>
+          <form>
+          <div class="modal-body">
+            <div class="form-group">
+              <input type="text" name="categoryName" class="form-control" placeholder="请输入一级分类的名称">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="submit" class="btn btn-primary ">确定</button>
+          </div>
+        </form>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
 
 
   <script src="lib/jquery/jquery.js"></script>
   <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+  <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
   <script src="lib/nprogress/nprogress.js"></script>
-  <script src="lib/echarts/echarts.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
   <script src="js/common.js"></script>
+  <script src="js/first.js"></script>
+
+  <script type="text/html" id="tpl">
+  {{each rows v i }}
+  <tr>
+    <td>{{(page - 1) * size + i + 1 }}</td>
+    <td>{{v.categoryName }}</td>
+  </tr>
+  {{/each}}
+</script>
 </body>
+
 </html>

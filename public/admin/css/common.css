@@ -5,3 +5,143 @@
 .mt_150 {
   margin-top: 150px;
 }
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul,ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html,body {
+  height: 100%;
+}
+
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #222d32;
+  z-index: 999;
+  transition: all 1s;
+}
+
+.lt_aside.now {
+  left: -180px;
+}
+
+.lt_aside .brand {
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #367fa9;
+  font-size: 20px;
+}
+
+.lt_aside .userinfo {
+  padding: 30px 0;
+}
+
+.lt_aside .userinfo img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.lt_aside .userinfo p {
+  color: #fff;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.lt_aside .nav a {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 40px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border-left: 3px solid transparent;
+}
+
+.lt_aside .nav a.active {
+  border-left: 3px solid blue;
+  background-color: #1d1f21;
+}
+
+.lt_aside .second a {
+  padding-left: 60px;
+}
+
+.lt_main {
+  /* background-color: pink; */
+  width: 100%;
+  height: 100%;
+  padding-left: 180px;
+  padding-top: 50px;
+  transition: all 1s;
+}
+
+.lt_main.now {
+  padding-left: 0;
+}
+
+.lt_main .topbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 50px;
+  background-color: #3c8dbc;
+  padding-left: 180px;
+  z-index: 998;
+  transition: all 1s;
+}
+
+.lt_main .topbar.now {
+  padding-left: 0;
+}
+
+.lt_main .topbar .left,
+.lt_main .topbar .right {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.breadcrumb {
+  margin: 20px 0;
+}
+
+.breadcrumb a {
+  color: #337ab7;
+}
+.lt_content .left,
+.lt_content .right {
+  height: 400px;
+  width: 47%;
+  /* background-color: pink; */
+}
+
+.table.table-bordered th,
+.table.table-bordered td{
+  text-align: center;
+  vertical-align: middle;
+}

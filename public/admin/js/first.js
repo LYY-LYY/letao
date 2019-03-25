@@ -1,7 +1,7 @@
+var page = 1
 $(function () {
-  // var page = 1
   var pageSize = 5
-  render(1)
+  render()
 
   // 添加分类
   $('.btn_add').click(function () {
@@ -46,7 +46,7 @@ $(function () {
   })
 
   // 渲染
-  function render(page) {
+  function render() {
     $.ajax({
       type: 'get',
       url: '/category/queryTopCategoryPaging',

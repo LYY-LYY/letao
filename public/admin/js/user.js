@@ -1,8 +1,8 @@
+var page = 1
 $(function () {
-  // var page = 1
   var pageSize = 5
   var id, isDelete
-  render(1)
+  render()
 
   // 启用和禁用功能
   $('tbody').on('click', '.btn', function () {
@@ -22,7 +22,7 @@ $(function () {
       success: function (info) {
         if(info.success) {
           $('#userModal').modal('hide')
-          render(1)
+          render()
         }
       }
     })
@@ -31,7 +31,7 @@ $(function () {
 
 
   // 渲染
-  function render(page) {
+  function render() {
     $.ajax({
       type: 'get',
       url: '/user/queryUser',

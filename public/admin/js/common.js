@@ -54,7 +54,8 @@ function paginator (info,render) {
     currentPage: info.page,
     totalPages: Math.ceil(info.total / info.size),
     onPageClicked: function (a , b, c, p) {
-      render(p)
+      page = p
+      render()
     }
   })
 }

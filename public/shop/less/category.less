@@ -1,0 +1,48 @@
+.main_left {
+  width: 90px;
+  height: 100%;
+  float: left;
+  position: relative;
+  li {
+    width: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #e3e4e5;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    &.active {
+      background-color: #fff;
+      border-right: none;
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      background-color: #666;
+      display: block;
+    }
+  }
+}
+
+.main_right {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  ul {
+    overflow: hidden;
+    li {
+      width: 33.33%;
+      float: left;
+      text-align: center;
+      img {
+        width: 70px;
+        height: 50px;
+        margin: 0 auto;
+      }
+    }
+    .tips {
+      padding: 10px;
+      color: #666;
+    }
+  }
+ }

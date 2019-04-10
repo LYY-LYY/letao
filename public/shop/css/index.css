@@ -1,0 +1,28 @@
+.nav li {
+  width: 33.33%;
+  float: left;
+}
+.product {
+  padding: 10px;
+  overflow: hidden;
+}
+.product-item {
+  float: left;
+  width: 48%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.product-item:nth-child(odd) {
+  margin-right: 4%;
+}
+.product-item .good_name {
+  height: 40px;
+}
+.product-item .good_price span:first-child {
+  color: red;
+}
+.product-item .good_price span:last-child {
+  text-decoration: line-through;
+}

@@ -1,0 +1,21 @@
+.img_box {
+  float: left;
+  width: 60px;
+}
+.img_box img {
+  width: 60px;
+  height: 60px;
+}
+.info {
+  overflow: hidden;
+  padding: 0 10px;
+}
+.info .proName {
+  color: #333;
+}
+.info .price span:nth-child(1) {
+  color: red;
+}
+.info .price span:nth-child(2) {
+  text-decoration: line-through;
+}
